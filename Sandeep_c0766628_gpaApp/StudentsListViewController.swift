@@ -1,5 +1,5 @@
 //
-//  RegestraionViewController.swift
+//  StudentsListViewController.swift
 //  Sandeep_c0766628_gpaApp
 //
 //  Created by Owner on 2019-11-14.

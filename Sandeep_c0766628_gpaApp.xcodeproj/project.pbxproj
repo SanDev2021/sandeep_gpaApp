@@ -11,8 +11,11 @@
 		EB022F0D237CDB5A001F34AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB022F0B237CDB5A001F34AB /* Main.storyboard */; };
 		EB022F0F237CDB7C001F34AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB022F0E237CDB7C001F34AB /* Assets.xcassets */; };
 		EB022F12237CDB7C001F34AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB022F10237CDB7C001F34AB /* LaunchScreen.storyboard */; };
-		EB022F1E237E1918001F34AB /* StudentsNamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F1D237E1918001F34AB /* StudentsNamesListViewController.swift */; };
+		EB022F1E237E1918001F34AB /* StudentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F1D237E1918001F34AB /* StudentsListViewController.swift */; };
 		EB022F222381C0E9001F34AB /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F212381C0E9001F34AB /* registrationViewController.swift */; };
+		EB022F242381C4B0001F34AB /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F232381C4B0001F34AB /* CoursesViewController.swift */; };
+		EB022F262381C6B5001F34AB /* SemesterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F252381C6B5001F34AB /* SemesterViewController.swift */; };
+		EB022F2A2381E6FC001F34AB /* Win.wav in Resources */ = {isa = PBXBuildFile; fileRef = EB022F292381E6FB001F34AB /* Win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +25,11 @@
 		EB022F0E237CDB7C001F34AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB022F11237CDB7C001F34AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB022F13237CDB7C001F34AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB022F1D237E1918001F34AB /* StudentsNamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsNamesListViewController.swift; sourceTree = "<group>"; };
+		EB022F1D237E1918001F34AB /* StudentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsListViewController.swift; sourceTree = "<group>"; };
 		EB022F212381C0E9001F34AB /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
+		EB022F232381C4B0001F34AB /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		EB022F252381C6B5001F34AB /* SemesterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterViewController.swift; sourceTree = "<group>"; };
+		EB022F292381E6FB001F34AB /* Win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Win.wav; path = "../../FT-Resources/Win.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				EB022F07237CDB5A001F34AB /* AppDelegate.swift */,
-				EB022F1D237E1918001F34AB /* StudentsNamesListViewController.swift */,
+				EB022F1D237E1918001F34AB /* StudentsListViewController.swift */,
 				EB022F212381C0E9001F34AB /* registrationViewController.swift */,
+				EB022F232381C4B0001F34AB /* CoursesViewController.swift */,
+				EB022F252381C6B5001F34AB /* SemesterViewController.swift */,
+				EB022F292381E6FB001F34AB /* Win.wav */,
 				EB022F0B237CDB5A001F34AB /* Main.storyboard */,
 				EB022F0E237CDB7C001F34AB /* Assets.xcassets */,
 				EB022F10237CDB7C001F34AB /* LaunchScreen.storyboard */,
@@ -126,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB022F12237CDB7C001F34AB /* LaunchScreen.storyboard in Resources */,
+				EB022F2A2381E6FC001F34AB /* Win.wav in Resources */,
 				EB022F0F237CDB7C001F34AB /* Assets.xcassets in Resources */,
 				EB022F0D237CDB5A001F34AB /* Main.storyboard in Resources */,
 			);
@@ -138,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB022F262381C6B5001F34AB /* SemesterViewController.swift in Sources */,
 				EB022F08237CDB5A001F34AB /* AppDelegate.swift in Sources */,
-				EB022F1E237E1918001F34AB /* StudentsNamesListViewController.swift in Sources */,
+				EB022F1E237E1918001F34AB /* StudentsListViewController.swift in Sources */,
+				EB022F242381C4B0001F34AB /* CoursesViewController.swift in Sources */,
 				EB022F222381C0E9001F34AB /* registrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
