@@ -12,7 +12,7 @@
         <!--StuentsList-->
         <scene sceneID="3rv-44-3mP">
             <objects>
-                <tableViewController id="W0O-Lh-tv6" userLabel="StuentsList" customClass="re" customModule="Sandeep_c0766628_gpaApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="W0O-Lh-tv6" userLabel="StuentsList" customClass="StudentsNamesListViewController" customModule="Sandeep_c0766628_gpaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cY0-tJ-H3f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,6 +217,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hr1-6l-lGn" id="l7p-Uc-4F2"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mahal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7h2-LU-idl">
                                 <rect key="frame" x="201" y="424" width="179" height="30"/>
@@ -224,6 +227,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hr1-6l-lGn" id="qiF-A8-3T8"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sandy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MKP-FS-cuC">
                                 <rect key="frame" x="201" y="335" width="179" height="30"/>
@@ -231,6 +237,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hr1-6l-lGn" id="PQY-WI-tWj"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iva-dG-Cej">
                                 <rect key="frame" x="72" y="425" width="107" height="28"/>
@@ -252,7 +261,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="save:" destination="hr1-6l-lGn" eventType="touchUpInside" id="jh7-kV-vwF"/>
+                                    <action selector="methodToSaveStudentData:" destination="hr1-6l-lGn" eventType="touchUpInside" id="pZQ-hV-P0E"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Db-lL-FAB">
@@ -266,6 +275,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HO6-gt-KpW"/>
                     </view>
+                    <connections>
+                        <outlet property="textFieldFirstName" destination="MKP-FS-cuC" id="fSD-Hj-Xlr"/>
+                        <outlet property="textFieldLastName" destination="7h2-LU-idl" id="KEF-RB-TgQ"/>
+                        <outlet property="textFieldStudentID" destination="PCW-hV-s7z" id="s9C-Zl-0VI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4U-rK-pSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

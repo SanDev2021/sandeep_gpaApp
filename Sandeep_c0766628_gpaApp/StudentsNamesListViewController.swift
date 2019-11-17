@@ -29,7 +29,7 @@ struct Semester {
 }
 
 /// StudentsListViewController to show list of Students
-class StudentsNamesListViewController: UITableViewController {
+class StudentsListViewController: UITableViewController {
     
     /// Array of student struct to save all student details
     var arrayStudents = [Student]()
@@ -69,7 +69,7 @@ class StudentsNamesListViewController: UITableViewController {
     ///   - segue: segue used to navigate to Save Student View Controller
     ///   - sender: Any
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let saveStudentVC = segue.destination as? SaveStudentViewController else {
+        guard let saveStudentVC = segue.destination as? registrationViewController else {
             return
         }
         

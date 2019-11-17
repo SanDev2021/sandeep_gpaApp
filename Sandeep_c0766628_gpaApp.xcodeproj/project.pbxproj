@@ -11,7 +11,8 @@
 		EB022F0D237CDB5A001F34AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB022F0B237CDB5A001F34AB /* Main.storyboard */; };
 		EB022F0F237CDB7C001F34AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB022F0E237CDB7C001F34AB /* Assets.xcassets */; };
 		EB022F12237CDB7C001F34AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB022F10237CDB7C001F34AB /* LaunchScreen.storyboard */; };
-		EB022F1E237E1918001F34AB /* StudentsNamesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F1D237E1918001F34AB /* StudentsNamesList.swift */; };
+		EB022F1E237E1918001F34AB /* StudentsNamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F1D237E1918001F34AB /* StudentsNamesListViewController.swift */; };
+		EB022F222381C0E9001F34AB /* registrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB022F212381C0E9001F34AB /* registrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +22,8 @@
 		EB022F0E237CDB7C001F34AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB022F11237CDB7C001F34AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB022F13237CDB7C001F34AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB022F1D237E1918001F34AB /* StudentsNamesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsNamesList.swift; sourceTree = "<group>"; };
+		EB022F1D237E1918001F34AB /* StudentsNamesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsNamesListViewController.swift; sourceTree = "<group>"; };
+		EB022F212381C0E9001F34AB /* registrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				EB022F07237CDB5A001F34AB /* AppDelegate.swift */,
-				EB022F1D237E1918001F34AB /* StudentsNamesList.swift */,
+				EB022F1D237E1918001F34AB /* StudentsNamesListViewController.swift */,
+				EB022F212381C0E9001F34AB /* registrationViewController.swift */,
 				EB022F0B237CDB5A001F34AB /* Main.storyboard */,
 				EB022F0E237CDB7C001F34AB /* Assets.xcassets */,
 				EB022F10237CDB7C001F34AB /* LaunchScreen.storyboard */,
@@ -136,7 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB022F08237CDB5A001F34AB /* AppDelegate.swift in Sources */,
-				EB022F1E237E1918001F34AB /* StudentsNamesList.swift in Sources */,
+				EB022F1E237E1918001F34AB /* StudentsNamesListViewController.swift in Sources */,
+				EB022F222381C0E9001F34AB /* registrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
