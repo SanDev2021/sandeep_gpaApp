@@ -5,41 +5,32 @@
 //  Created by Owner on 2019-11-17.
 //  Copyright © 2019 SandeepAppDev. All rights reserved.
 //
-
-
 import UIKit
-
-protocol SaveStudentViewControllerDelegate: class {
+protocol SaveStudentViewControllerDelegate: class
+{
     func saveStudentData(student: Student)
 }
 
-class registrationViewController: UIViewController {
-    
-    /// Variables
+class registrationViewController: UIViewController
+{
     @IBOutlet weak var textFieldFirstName: UITextField!
     @IBOutlet weak var textFieldLastName: UITextField!
     @IBOutlet weak var textFieldStudentID: UITextField!
-    
     weak var delegate: SaveStudentViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
-    
-    /// Method to show text field validation error messages
-    /// - Parameters:
-    ///   - title: String -  title of the Alert
-    ///   - message: String - Message of the Alert
-    private func showTextFieldValidationAlertMessage(title: String = "", message: String) {
+       }
+    /// function to show text field validation error messages
+    private func showTextFieldValidationAlertMessage(title: String = "", message: String)
+    {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    /// Method for validation of empty text fields
-    private func validateTextField() -> Bool {
+    /// function for validation of empty text fields
+    private func validateTextField() -> Bool
+    {
         if let firstName = self.textFieldFirstName.text, firstName.isEmpty {
             self.showTextFieldValidationAlertMessage(message: "First Name is empty.")
             return false
@@ -53,11 +44,10 @@ class registrationViewController: UIViewController {
         return true
     }
     
-    /// Method to show Alert message for saving student data after validation on clicking save button
-    /// - Parameters:
-    ///   - title: String -  title of the Alert
-    ///   - message: String - Message of the Alert
-    private func showSaveAlertMessage(title: String = "", message: String) {
+    /// function to show Alert message for saving student data after validation on clicking save button
+ 
+    private func showSaveAlertMessage(title: String = "", message: String)
+    {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "No Way!", style: .cancel, handler: nil))
         
@@ -76,16 +66,13 @@ class registrationViewController: UIViewController {
                                   lastName: self.textFieldLastName.text!,
                                   studentID: self.textFieldStudentID.text!,
                                   semester: semesterArray)
-            
             self.delegate?.saveStudentData(student: student)
         }))
-        
         self.present(alertController, animated: true, completion: nil)
     }
-    
-    /// Method to show confirmation after saving student data on clicking "Yes,I'mSure!" in alert message
-    /// - Parameter studentName: String - Name of the student to show in alert
-    private func showConfirmationAlertMessage(studentName: String) {
+    /// function to show confirmation after saving student
+   private func showConfirmationAlertMessage(studentName: String)
+   {
         let alertController = UIAlertController(title: "New Contact Saved", message: "\(studentName) is now a student", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
             self.textFieldFirstName.text = ""
@@ -94,21 +81,17 @@ class registrationViewController: UIViewController {
         }))
         self.present(alertController, animated: true, completion: nil)
     }
-    
     /// Method to be called on clicking save button
-    /// - Parameter sender: Any
-    @IBAction func methodToSaveStudentData(_ sender: Any) {
+    @IBAction func methodToSaveStudentData(_ sender: Any)
+    {
         if validateTextField() {
             self.showSaveAlertMessage(message: "Are you sure?")
-        }
-    }
-    
-}
-
+        }}}
 /// Extension of Save Student View Controller for text field delegate methods
-extension registrationViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+extension registrationViewController: UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
         textField.endEditing(true)
         return true
     }

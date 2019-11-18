@@ -5,7 +5,7 @@
 //  Created by Owner on 2019-11-17.
 //  Copyright © 2019 SandeepAppDev. All rights reserved.
 //
-/// Global Constants for the project
+
 extension Constants {
     static let semesterCellIdentifier = "semesterCellIdentifier"
 }
@@ -32,14 +32,16 @@ class SemesterViewController: UITableViewController {
     
 }
 
-/// Extension of SemesterViewController for table view data source and delegate methods
+///for table view data source and delegate methods
 extension SemesterViewController {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return student?.semester.count ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.semesterCellIdentifier, for: indexPath)
         
         cell.textLabel?.text = student?.semester[indexPath.row].name
@@ -47,7 +49,8 @@ extension SemesterViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
         guard let coursesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CoursesViewController") as? CoursesViewController else {
@@ -60,11 +63,15 @@ extension SemesterViewController {
     }
 }
 
-/// Extension of SemesterViewController for Courses View Controller Delegate methods
-extension SemesterViewController: CoursesViewControllerDelegate {
-    func saveStudentGPA(semester: Semester?) {
-        for i in 0..<student!.semester.count {
-            if student!.semester[i].name == semester?.name {
+///  Courses View Controller Delegate methods
+extension SemesterViewController: CoursesViewControllerDelegate
+{
+    func saveStudentGPA(semester: Semester?)
+    {
+        for i in 0..<student!.semester.count
+        {
+            if student!.semester[i].name == semester?.name
+            {
                 student?.semester[i] = semester!
                 self.delegate?.didChangeSemesterData(student: student!)
                 return

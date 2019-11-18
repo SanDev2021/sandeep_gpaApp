@@ -311,7 +311,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RqG-hi-j1A">
-                                                <rect key="frame" x="160" y="47" width="25" height="30"/>
+                                                <rect key="frame" x="160" y="47" width="234" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -328,7 +328,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8Q-cP-v2C">
-                                                <rect key="frame" x="160" y="114" width="25" height="30"/>
+                                                <rect key="frame" x="160" y="114" width="234" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -345,7 +345,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SxG-2h-ma8">
-                                                <rect key="frame" x="160" y="178" width="25" height="30"/>
+                                                <rect key="frame" x="160" y="178" width="234" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -353,7 +353,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeL-gs-xmZ">
-                                                <rect key="frame" x="81.5" y="248" width="42" height="35"/>
+                                                <rect key="frame" x="186" y="248" width="42" height="35"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <state key="normal" title="Save"/>
                                                 <connections>
@@ -388,6 +388,7 @@
                                     <constraint firstItem="1DI-AU-QTh" firstAttribute="top" secondItem="63l-qq-TJG" secondAttribute="top" id="4eF-bA-gah"/>
                                     <constraint firstAttribute="bottom" secondItem="1DI-AU-QTh" secondAttribute="bottom" id="8cU-mf-rZK"/>
                                     <constraint firstItem="1DI-AU-QTh" firstAttribute="leading" secondItem="63l-qq-TJG" secondAttribute="leading" id="JZM-8n-kHW"/>
+                                    <constraint firstItem="1DI-AU-QTh" firstAttribute="leading" secondItem="Bj3-Hg-Yta" secondAttribute="leading" id="N3C-wc-Xr4"/>
                                     <constraint firstItem="1DI-AU-QTh" firstAttribute="bottom" secondItem="63l-qq-TJG" secondAttribute="bottom" id="bwN-Gn-C1m"/>
                                     <constraint firstAttribute="trailing" secondItem="1DI-AU-QTh" secondAttribute="trailing" id="xsw-30-p5K"/>
                                     <constraint firstItem="1DI-AU-QTh" firstAttribute="centerX" secondItem="Bj3-Hg-Yta" secondAttribute="centerX" id="zln-or-Aq5"/>
