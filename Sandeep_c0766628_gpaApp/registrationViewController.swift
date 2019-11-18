@@ -10,7 +10,6 @@ protocol SaveStudentViewControllerDelegate: class
 {
     func saveStudentData(student: Student)
 }
-
 class registrationViewController: UIViewController
 {
     @IBOutlet weak var textFieldFirstName: UITextField!
@@ -43,10 +42,8 @@ alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: ni
         }
         return true
     }
-    
     /// function to show Alert message for saving student data after validation on clicking save button
- 
-    private func showSaveAlertMessage(title: String = "", message: String)
+ private func showSaveAlertMessage(title: String = "", message: String)
     {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "No Way!", style: .cancel, handler: nil))
@@ -54,18 +51,13 @@ alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: ni
         alertController.addAction(UIAlertAction(title: "Yes,I'mSure!", style: .default, handler: { action in
             let studentName = (self.textFieldFirstName.text!) + " " + self.textFieldLastName.text!
             self.showConfirmationAlertMessage(studentName: studentName)
-            
             var semesterArray = [Semester]()
-            
             for i in 1..<4 {
                 let semester = Semester(name: "Semester \(i)", studentGPA: 0.0)
                 semesterArray.append(semester)
             }
             
-            let student = Student(firstName: self.textFieldFirstName.text!,
-                                  lastName: self.textFieldLastName.text!,
-                                  studentID: self.textFieldStudentID.text!,
-                                  semester: semesterArray)
+        let student = Student(firstName: self.textFieldFirstName.text!,lastName: self.textFieldLastName.text!,studentID: self.textFieldStudentID.text!,semester: semesterArray)
             self.delegate?.saveStudentData(student: student)
         }))
         self.present(alertController, animated: true, completion: nil)

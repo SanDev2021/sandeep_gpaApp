@@ -96,7 +96,6 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
         self.navigationController?.pushViewController(semesterVC, animated: true)
     }
 }
-
 /// Extension of StudentsListViewController for Save Student ViewController Delegate methods
 extension StudentsListViewController: SaveStudentViewControllerDelegate {
     func saveStudentData(student: Student) {
@@ -123,5 +122,3 @@ extension StudentsListViewController: SemesterViewControllerDelegate {
         }
     }
 }
-
-

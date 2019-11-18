@@ -4,7 +4,6 @@
 //
 //  Created by Owner on 2019-11-17.
 //  Copyright © 2019 SandeepAppDev. All rights reserved.
-
 import UIKit
 import AVFoundation
 enum Grade: Double {
@@ -54,7 +53,8 @@ class CoursesViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     //keyboard will show after clicking
-    @objc func keyboardWillShow(notification:NSNotification){
+    @objc func keyboardWillShow(notification:NSNotification)
+    {
         let userInfo = notification.userInfo!
         var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
@@ -63,12 +63,14 @@ class CoursesViewController: UIViewController {
         contentInset.bottom = keyboardFrame.size.height
         scrollView.contentInset = contentInset
     }
-    @objc func keyboardWillHide(notification:NSNotification){
+    @objc func keyboardWillHide(notification:NSNotification)
+    {
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
     }
     /// Method to show text field validation error messages
-    private func showTextFieldValidationAlertMessage(title: String = "", message: String) {
+    private func showTextFieldValidationAlertMessage(title: String = "", message: String)
+    {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
@@ -94,7 +96,8 @@ class CoursesViewController: UIViewController {
         return true
     }
 /// Action method on clicking calculate button
-   @IBAction func methodClickedCalculate(_ sender: Any) {
+   @IBAction func methodClickedCalculate(_ sender: Any)
+   {
         if validateTextField() {
             self.calculateTotalGPA()
         }}
@@ -126,24 +129,21 @@ class CoursesViewController: UIViewController {
         {
             arrayCourse.append(course)
         }
-        
         if arrayCourse.count == 5 {
             var totalCredits = 0.0
             var totalGPA = 0.0
-            
             for i in 0..<arrayCourse.count {
-                totalCredits = arrayCourse[i].credit
+                totalCredits += arrayCourse[i].credit
                 totalGPA = arrayCourse[i].gpa
             }
         //formula to cALCULATE FINal GPa
             let finalGPA = totalGPA / totalCredits
-            
             if finalGPA > 2.8 {
                 self.playAudio()
             }
         semester?.studentGPA = finalGPA
             self.labelTotalGPA.text = String(format: "%.2f", finalGPA)
-self.delegate?.saveStudentGPA(semester: semester!)
+        self.delegate?.saveStudentGPA(semester: semester!)
         }
     }
     /// Method to create course object with proper data
